@@ -1,0 +1,66 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">Lego Sets</app-page-title>
+  </div>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="content-container" *ngIf="!isLoading">
+  <div class="content-container-card">
+    <section class="wanted-section">
+      <h2>Sets I Want</h2>
+      <table class="set-table">
+        <th>Set Name</th>
+        <th>Series</th>
+        <tr *ngFor="let set of wantedSets">
+          <td>
+            <a [href]="set.url" target="_blank" title="Open on LEGO.com">{{ set.name }}</a>
+          </td>
+
+          <td>{{ set.series }}</td>
+        </tr>
+      </table>
+    </section>
+    <section class="owned-section">
+      <h2>Sets I Own</h2>
+
+      <div class="series-filter-container">
+        <mat-form-field>
+          <mat-label>Filter by Series</mat-label>
+          <mat-select [(ngModel)]="seriesOptionSelected" (ngModelChange)="applyFilters()">
+            <mat-option [value]="filterOptionNoSeries">All Series</mat-option>
+            @for (series of ownedSeriesOptions; track series) {
+            <mat-option [value]="series">{{ series }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="filters-container">
+        <mat-radio-group
+          class="filters-group"
+          [(ngModel)]="filterOptionSelected"
+          (ngModelChange)="applyFilters()">
+          <mat-radio-button [value]="filterOptionAll">All</mat-radio-button>
+          <mat-radio-button [value]="filterOptionBuilt">Only Built</mat-radio-button>
+          <mat-radio-button [value]="filterOptionUnbuilt">Only Unbuilt</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <table class="set-table">
+        <th>Set Name</th>
+        <th>Series</th>
+        <th>Built</th>
+
+        <tr *ngFor="let set of filteredOwnedSets">
+          <td>
+            <a [href]="set.url" target="_blank" title="Open on LEGO.com">{{ set.name }}</a>
+          </td>
+          <td>{{ set.series }}</td>
+          <td>
+            <app-check-or-x [isCheck]="set.built"></app-check-or-x>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>

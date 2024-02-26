@@ -1,0 +1,37 @@
+$card-horizontal-padding: 38px;
+$card-vertical-padding: 15px;
+
+$max-width: 750px;
+$min-width: 350px;
+
+h1 {
+  font-size: 34px;
+  padding-top: 10px;
+}
+
+.back-to-blog-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.blog-post-container {
+  padding-left: $card-horizontal-padding;
+  padding-right: $card-horizontal-padding;
+  padding-top: $card-vertical-padding;
+  padding-bottom: $card-vertical-padding;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  max-width: $max-width;
+  min-width: $min-width;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .blog-post-container {
+    padding-left: 10px;
+    padding-right: 2px;
+    font-size: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

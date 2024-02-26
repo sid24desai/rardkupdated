@@ -1,0 +1,102 @@
+.body-container {
+  font-size: 18px;
+}
+
+/* header */
+.avatar {
+  border-radius: 47%;
+  height: 120px;
+  transition: border-radius 0.5s;
+}
+.avatar:hover {
+  border-radius: 8%;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.name {
+  letter-spacing: 0.12rem;
+  margin-bottom: 7px;
+}
+
+.bio {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.12rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.below-avatar-text {
+  color: #ffffff;
+}
+
+.below-avatar {
+  margin-bottom: 7px;
+  margin-top: 10px;
+}
+
+.divider {
+  padding-left: 5px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 10px;
+  margin-block-start: 10px;
+}
+
+.social-icon {
+  width: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: rotate(360deg);
+}
+
+.social-icon:active {
+  opacity: 0;
+  transition: 0.1s linear;
+  transform: scale(3) rotate(10deg);
+}
+
+.github {
+  fill: #ffffff;
+}
+
+.twitch {
+  fill: #9146ff;
+}
+
+.mastodon {
+  fill: #6364ff;
+}
+
+.bluesky {
+  fill: #0285ff;
+}
+
+.twitter {
+  fill: #1d9bf0;
+}
+
+.discord {
+  fill: #5865f2;
+}
+
+.rss {
+  fill: #ffa500;
+}

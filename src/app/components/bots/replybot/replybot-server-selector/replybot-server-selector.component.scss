@@ -1,0 +1,73 @@
+.icon-img {
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guild-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guild-items {
+  flex-grow: 0.8;
+  max-width: 650px;
+}
+
+.guild-items-loading {
+  flex-grow: 0.8;
+}
+
+.guild-item {
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  background-color: white;
+  color: #000000;
+
+  /* below is to vertically align */
+  position: relative;
+}
+
+.guild-name {
+  font-size: 16px;
+  font-weight: 500;
+
+  /* below is to vertically align */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.guild-item-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.guild-item-link:visited {
+  color: #000000;
+}
+
+.guild-item-link:active {
+  color: #000000;
+}
+
+.guild-item:hover {
+  background-color: #cccaca;
+  cursor: pointer;
+}
+
+.guild-item:active {
+  background-color: #9c9c9c;
+  cursor: pointer;
+}

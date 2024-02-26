@@ -1,0 +1,125 @@
+.icon-img {
+  height: 235px;
+  width: 235px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.discord-button {
+  width: 30px;
+
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+}
+
+.discord-button:hover {
+  transform: rotate(360deg);
+}
+
+.discord-button:active {
+  opacity: 0;
+  transition: 0.1s linear;
+  transform: scale(3) rotate(10deg);
+}
+
+.bot-description {
+  font-size: 14px;
+  font-weight: 500;
+  display: inline;
+  position: absolute;
+  padding-top: 45px;
+}
+
+.bot-name {
+  font-weight: 600;
+  margin-bottom: 8px; /* this is to override the Angular Material h3 setting */
+}
+
+.bot-actions {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bot {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.bot-card {
+  width: 80%;
+  position: relative;
+
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+.bot-button-link {
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 138px;
+}
+
+.bot-text {
+  margin-right: 10px;
+}
+
+.settings {
+  background-color: rgb(255, 64, 129);
+  color: #ffffff;
+}
+.settings:hover,
+.settings:active {
+  background-color: rgb(245, 54, 119);
+  color: #ffffff;
+}
+
+.invite {
+  background-color: rgb(130, 75, 158);
+  color: #ffffff;
+}
+.invite:hover,
+.invite:active {
+  background-color: rgb(120, 65, 148);
+  color: #ffffff;
+}
+
+.github {
+  background-color: rgb(0, 178, 214);
+  color: #ffffff;
+}
+.github:hover,
+.github:active {
+  background-color: rgb(-10, 168, 204);
+  color: #ffffff;
+}
+
+@media screen and (min-width: 0px) and (max-width: 940px) {
+  .bot-description {
+    display: inline;
+    position: absolute;
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .bot {
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+  }
+
+  .bot-description {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .icon-img {
+    border-radius: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

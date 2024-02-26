@@ -1,0 +1,54 @@
+.editor-box {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  color: #000000;
+}
+
+.dialog-card {
+  height: 100%;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+.input-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-reply-group {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #424242;
+  border-radius: 10px;
+  box-shadow: 2 2;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.user-reply-group-actions {
+  padding-top: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button {
+  flex-grow: 0.8;
+  margin-right: 10px;
+}
+
+.form-error {
+  color: red;
+}
+
+.channel-ids-description,
+.user-ids-description {
+  margin-bottom: 10px;
+}

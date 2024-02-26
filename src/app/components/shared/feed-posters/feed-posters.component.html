@@ -1,0 +1,44 @@
+<h2 class="feed-section-title">
+  {{ sectionTitle }}
+  <app-see-more-link
+    *ngIf="profileUrl && profileName"
+    [url]="profileUrl!"
+    [name]="profileName!"></app-see-more-link>
+</h2>
+<ng-container *ngIf="isLoading && !isError">
+  <mat-spinner></mat-spinner>
+</ng-container>
+<ng-container *ngIf="!isLoading && !isError">
+  <ng-container *ngIf="feedItems && feedItems.length > 0; else no_content">
+    <div class="feed-item-posters-wrapper" *ngIf="isPoster">
+      <div class="feed-item-poster" *ngFor="let feedItem of feedItems">
+        <a [href]="feedItem.url" target="_blank">
+          <img [alt]="feedItem.title" class="feed-item-poster-img" [src]="feedItem.imageUrl" />
+        </a>
+        <div *ngIf="feedItem.rating">
+          <a class="feed-item-rating" [href]="feedItem.url" target="_blank">
+            {{ feedItem.rating }} / {{ ratingMax }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isList">
+      <ul class="feed-list-item-name">
+        <li class="feed-list-item" *ngFor="let feedItem of feedItems">
+          <a [href]="feedItem.url" target="_blank">{{ feedItem.title }}</a>
+          {{ feedItem.summary ? " - " + feedItem.summary : "" }}
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+  <ng-template #no_content>
+    <div class="no-content-text-container">
+      <div class="no-content-text">None</div>
+    </div>
+  </ng-template>
+</ng-container>
+<ng-container *ngIf="isError">
+  <div class="error-wrapper">
+    <div class="error-text">There was an error loading this data. Please try again later.</div>
+  </div>
+</ng-container>

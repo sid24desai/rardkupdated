@@ -1,0 +1,43 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">RSS Feeds</app-page-title>
+    <p>These are the links to my RSS feeds.</p>
+  </div>
+</div>
+<div class="content-container">
+  <div class="content-container-card">
+    <div class="feed-section">
+      <h2>Blog</h2>
+      <p>
+        The RSS feed for my
+        <a [routerLink]="['/blog']">Blog</a>
+        Posts
+      </p>
+      <p>
+        <a
+          class="feed-link"
+          target="_blank"
+          href="https://rardk64.com/rss/blog"
+          title="Blog RSS Feed">
+          <div class="feed-button">Go to the Blog RSS Feed</div>
+        </a>
+      </p>
+    </div>
+    <div class="feed-section">
+      <h2>Links</h2>
+      <p>
+        The RSS feed for my
+        <a [routerLink]="['/links']">shared links</a>
+      </p>
+      <p>
+        <a
+          class="feed-link"
+          target="_blank"
+          href="https://rardk64.com/rss/links"
+          title="Shared Links RSS Feed">
+          <div class="feed-button">Go to the Links RSS Feed</div>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

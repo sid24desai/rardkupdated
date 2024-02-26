@@ -1,0 +1,38 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">Video Games Collection</app-page-title>
+    <p>Select a platform below to view the games I have for that platform.</p>
+  </div>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="content-container" *ngIf="!isLoading">
+  <div class="content-container-card">
+    <div class="platform-select-container">
+      <mat-form-field>
+        <mat-label>Select a Platform</mat-label>
+        <mat-select [(ngModel)]="selectedPlatform">
+          @for (platform of availablePlatforms; track platform) {
+          <mat-option [value]="platform.name">
+            {{ platform.name }} ({{ platform.gameCount }} games)
+          </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <section
+      class="games-collection-section"
+      *ngFor="
+        let platformGrouping of gameCollectionItemsGrouped | keyvalue;
+        let platformIndex = index
+      ">
+      <table class="set-table" *ngIf="platformGrouping.key === selectedPlatform">
+        <th>Game</th>
+        <tr *ngFor="let gameCollectionItem of sortGames(platformGrouping.value)">
+          <td>
+            {{ gameCollectionItem.title }}
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</div>

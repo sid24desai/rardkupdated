@@ -1,0 +1,18 @@
+<app-feed-posters
+  sectionTitle="Current Games"
+  [ratingMax]="10"
+  [isLoading]="isCurrentGamesFeedLoading"
+  [feedItems]="currentGamesFeedItems"
+  displayType="poster"
+  profileUrl="https://www.backloggd.com/u/rardk64/games/added:desc/type:playing/"
+  profileName="Backloggd"
+  [isError]="isCurrentGamesError"></app-feed-posters>
+<app-feed-posters
+  sectionTitle="Recent Games"
+  [ratingMax]="10"
+  [isLoading]="isReviewsFeedLoading"
+  [feedItems]="reviewsFeedItems"
+  displayType="poster"
+  profileUrl="https://www.backloggd.com/u/rardk64/"
+  profileName="Backloggd"
+  [isError]="isRecentlyFinishedGamesError"></app-feed-posters>

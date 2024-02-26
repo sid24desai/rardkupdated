@@ -1,0 +1,7 @@
+@if(routerLink){
+<a [routerLink]="routerLink">
+  <p class="displayed-date">{{ labelText }} {{ formattedDate }}</p>
+</a>
+} @else{
+<p class="displayed-date">{{ labelText }} {{ formattedDate }}</p>
+}

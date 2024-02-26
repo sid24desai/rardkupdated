@@ -1,0 +1,6 @@
+<button class="log-in-button button" (click)="logInWithDiscord()" *ngIf="!isLoggedIn()">
+  Log in with Discord
+</button>
+<button class="log-out-button button" *ngIf="isLoggedIn()" (click)="confirmLogOut()">
+  Log Out
+</button>

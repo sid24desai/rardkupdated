@@ -1,0 +1,21 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">Discord Servers for Toby the Replybot</app-page-title>
+  </div>
+</div>
+<div class="guild-list-container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div class="guild-items" *ngIf="!isLoading">
+    <ng-container *ngIf="isLoggedIn()">
+      <a
+        class="guild-item-link"
+        *ngFor="let guild of discordGuilds"
+        [href]="'/bots/replybot/reply-definitions?guildId=' + guild.id">
+        <div class="guild-item">
+          <img class="icon-img" [src]="guild.iconUrl" [alt]="guild.name" />
+          <span class="guild-name">{{ guild.name }}</span>
+        </div>
+      </a>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.help-dialog-container {
+  text-align: center;
+  color: #000000;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.help-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.help-title {
+  margin-top: 20px;
+}
+
+.help-dialog-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.help-dialog-button {
+  flex-grow: 0.8;
+}
+
+.explanation {
+  text-align: left;
+}
+
+.term-name {
+  font-weight: bold;
+}
+
+.term-definition {
+  margin-bottom: 10px;
+}
+
+.keyword-options {
+  text-align: left;
+}
+
+.keyword-name {
+  font-weight: bold;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .help-dialog-container {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,41 @@
+.set-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.set-table td,
+.set-table th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.set-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.set-table tr:hover {
+  background-color: #dddddd;
+}
+
+.set-table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+img {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.img-cell {
+  text-align: center;
+}
+
+.platform-select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

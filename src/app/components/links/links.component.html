@@ -1,0 +1,27 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">Links</app-page-title>
+    <p>Various links I found interesting enough to share.</p>
+  </div>
+</div>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<ng-container *ngIf="!isLoading">
+  <div class="repeating-post" *ngFor="let link of links">
+    <div class="repeating-post-summary">
+      <p>
+        {{ link.description }}
+      </p>
+      <p>
+        <a [href]="link.link" target="_blank">
+          {{ link.title }}
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        &nbsp;
+      </p>
+      <app-date-display
+        [routerLink]="['/links', link.slug]"
+        [dateToDisplay]="link.dateShared"
+        labelText="Shared on:"></app-date-display>
+    </div>
+  </div>
+</ng-container>

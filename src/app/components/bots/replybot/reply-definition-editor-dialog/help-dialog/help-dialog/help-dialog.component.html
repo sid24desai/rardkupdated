@@ -1,0 +1,101 @@
+<div class="help-dialog-container">
+  <h1 class="help-title">Help</h1>
+  <div class="help-dialog-buttons">
+    <button class="help-dialog-button secondary action button" (click)="closeHelp()">
+      Close Help
+    </button>
+  </div>
+  <div class="explanation help-section">
+    <h2 class="help-section-title">Terminology</h2>
+    <div class="terminology-explanation">
+      <div class="term-name">Reply Definition</div>
+      <div class="term-definition">
+        A reply definition is the entire thing you're working on. This includes triggers, replies,
+        user-specific overrides, and any additional settings.
+      </div>
+      <div class="term-name">Trigger</div>
+      <div class="term-definition">
+        A trigger is what the user will type that the bot will recognize to activate the reply
+        definition. A trigger is the only required element of a reply definition. You can specify
+        multiple triggers.
+      </div>
+      <div class="term-name">Trigger Requires Bot Name</div>
+      <div class="term-definition">
+        This is used if you'd like to trigger the bot without including the bot name keyword (see
+        below) in the trigger(s) for that reply definition, but still only want to trigger this
+        reply definition if the bot's name is included in the message.
+      </div>
+      <div class="term-name">Specific Channels</div>
+      <div class="term-definition">
+        This allows you to specify Channel IDs which will mean that the reply definition will
+        <strong>only</strong>
+        trigger in those specific channels. You can specify as many channels as you'd like. You must
+        use the
+        <a
+          target="_blank"
+          href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">
+          Channel ID
+        </a>
+        .
+      </div>
+      <div class="term-name">Specific Users</div>
+      <div class="term-definition">
+        This allows you to specify User IDs which will mean that the reply definition will
+        <strong>only</strong>
+        trigger for those specific users. You can specify as many users as you'd like. You must use
+        their
+        <a
+          target="_blank"
+          href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">
+          User ID
+        </a>
+        .
+      </div>
+      <div class="term-name">Reply</div>
+      <div class="term-definition">
+        A reply is what the bot will respond when it recognizes the trigger. You can specify
+        multiple replies, they will be chosen randomly.
+      </div>
+      <div class="term-name">Mention Author When Replying</div>
+      <div class="term-definition">
+        The Mention Author setting is used to determine whether or not the user who triggered the
+        bot's reply will be mentioned in the reply.
+      </div>
+      <div class="term-name">Reactions</div>
+      <div class="term-definition">
+        You can add emoji reactions to your reply definitions. You can only include one (1) emoji at
+        a time (add multiple reactions to have multiple emoji reactions), and custom emotes are not
+        supported at this time.
+      </div>
+      <div class="term-name">Priority</div>
+      <div class="term-definition">
+        The bot will look at your reply definitions and choose one from top to bottom. That is, if
+        you have two reply definitions with the same trigger(s), it will choose whichever is first
+        in the reply definitions list. You can use the up and down arrows on a reply definition to
+        adjust their priority.
+      </div>
+    </div>
+  </div>
+  <div class="keywords help-section">
+    <h2 class="help-section-title">Keywords you can use in Reply Text</h2>
+    <div class="keyword-options">
+      <div class="keyword-option" *ngFor="let keyword of keywords">
+        <div class="keyword-name">
+          {{ keyword.keyword }}
+          <button
+            class="copy-button action-button secondary action button"
+            [cdkCopyToClipboard]="keyword.keyword">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+
+        <span class="keyword-description">{{ keyword.description }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="help-dialog-buttons">
+    <button class="help-dialog-button secondary action button" (click)="closeHelp()">
+      Close Help
+    </button>
+  </div>
+</div>

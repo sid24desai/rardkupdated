@@ -1,0 +1,56 @@
+.time-zones-container {
+  text-align: center;
+}
+
+.set-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.set-table td,
+.set-table th {
+  border: 1px solid #dddddd;
+}
+
+.set-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.set-table tr:hover {
+  background-color: #dddddd;
+}
+
+.set-table th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 6px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+.set-table td {
+  font-size: 14px;
+}
+
+.filter-explanation {
+  margin-bottom: 8px;
+}
+
+.filter-field {
+  margin-right: 8px;
+}
+
+.current-time-zone-highlight {
+  font-weight: 500;
+}
+
+.set-button {
+  width: 130px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .set-button {
+    width: 47px;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="page-description-container">
+  <div class="page-description-content">
+    <app-page-title [titleSize]="1">Discord Bots</app-page-title>
+    <p>
+      These are my Discord bots. You can configure some of them using the Settings button. You will
+      need to be logged in with your Discord account.
+    </p>
+    <app-login-actions></app-login-actions>
+  </div>
+</div>
+
+<ng-container *ngFor="let bot of bots">
+  <div class="content-container bot">
+    <div class="content-container-card bot-card">
+      <img class="icon-img" [src]="bot.imageUrl" [alt]="bot.name" />
+      <div class="bot-description">
+        <h3 class="bot-name">{{ bot.name }}</h3>
+        <div class="bot-text">{{ bot.description }}</div>
+        <div class="bot-actions">
+          <a [href]="bot.inviteLink" target="_blank" *ngIf="bot.inviteLink">
+            <div class="button bot-button-link invite">Invite Bot</div>
+          </a>
+          <a
+            (click)="showMessageIfNotLoggedIn()"
+            *ngIf="bot.isConfigurable"
+            [routerLink]="bot.controlPanelLink">
+            <div class="button bot-button-link settings">Settings</div>
+          </a>
+          <a [href]="bot.gitHubLink" target="_blank" *ngIf="bot.gitHubLink">
+            <div class="button bot-button-link github">GitHub</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
